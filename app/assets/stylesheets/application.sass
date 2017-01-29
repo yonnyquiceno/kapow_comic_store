@@ -1,25 +1,56 @@
-@import "materialize"
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto')
+// @import "materialize"
 @import "pages"
-nav
-  background: rgba(0, 0, 0, 0) !important
-  color: white
+*
+  box-sizing: border-box
 #navBar
-  z-index: 1
-  position: absolute
-  top: 0px
-  width: 100%
   img
     @media (min-width: 768px)
-      padding-left: 30px
-      height: 80px
-  .nav-wrapper
-    background: rgba(0, 0, 0, 0.8) !important
-  #site-menu
-    position: absolute
-    right: 50%
-  #user-menu
-    position: absolute
-    right: 30px
-    .nav-bar-option
-      color: white
-      font-size: 60
+    padding-left: 20px
+    width: 150px
+    z-index: 10
+    position: fixed
+    top: 5px
+  nav
+    background: rgba(0, 0, 0, 0.8)
+    z-index: 1
+    position: fixed
+    top: 10px
+    width: 100%
+    // height: 40px
+    color: white
+    padding-left: 0
+    #nav-bar-options
+      height: 40px
+      margin-left: 200px
+      display: table
+      .nav-bar-option
+        color: white
+        display: table-cell
+        vertical-align: middle
+        font-family: 'Oswald'
+        .nav-bar-link
+          color: white
+          text-decoration: none
+    #user-options
+      height: 40px
+      display: table
+      position: absolute
+      right: 40px
+      #user-signed-in
+        color: rgba(244, 110, 66, 1)
+        display: table-cell
+        vertical-align: middle
+      .nav-bar-option
+        color: white
+        display: table-cell
+        vertical-align: middle
+      a
+        color: white
+        text-decoration: none
+      h5
+        font-size: 10px
+    h5
+      font-size: 15px
+      display: inline
+      padding: 10px
