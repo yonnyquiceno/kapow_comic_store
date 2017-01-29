@@ -1,2 +1,37 @@
 <%= render "layouts/header" %>
 <h1>Submit new product</h1>
+<%= form_for @product, url: {action: 'create'} do |form|%>
+<div>
+    <%= form.label "Título", for:'name'%>
+    <div class="form-group">
+        <%= form.text_field :name, class:'form-control', required: true%>
+    </div>
+</div>
+<div>
+    <%= form.label "Precio", for:'price'%>
+    <div class="form-group">
+        <%= form.text_field :price, class:'form-control', required: true%>
+    </div>
+</div>
+<div>
+    <%= form.label "Descripción", for:'description'%>
+    <div class="form-group">
+        <%= form.text_field :description, class:'form-control', required: true%>
+    </div>
+</div>
+<div>
+    <%= form.label "Imagen Frontal" , for:'image1'%>
+    <div class="form-group">
+        <%= form.text_field :image1, class:'form-control', required: true%>
+    </div>
+</div>
+<div>
+    <%= form.label "Imagen Trasera" , for:'image2'%>
+    <div class="form-group">
+        <%= form.text_field :image2, class:'form-control', required: true%>
+    </div>
+</div>
+
+<%= form.submit "Registrar Producto", class: ''%>
+<%= link_to "Cancel", products_path, class: 'btn btn-default'%>
+<%end%>
