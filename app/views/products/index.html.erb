@@ -1,2 +1,15 @@
 <%= render "layouts/header" %>
-<h1>Products index</h1>
+<span id="products_index_page">
+    <div id="space"></div>
+    <div class="flex-container">
+    <% @products.each do |prod| %>
+    <div class="prod-container">
+        <%= image_tag(asset_path(prod.image1.to_s), :class => "shrink pic prod-img ")%>
+        <h4>
+            <%= prod.name.capitalize%>
+        </h4>
+    </div>
+    <%end %>
+  </div>
+
+</span>

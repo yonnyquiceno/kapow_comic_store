@@ -1,26 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto')
-// @import "materialize"
+@import url('https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker')
 @import "pages"
+@import "products_index"
 *
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
   box-sizing: border-box
+
 #navBar
-  img
-    @media (min-width: 768px)
-    padding-left: 20px
-    width: 150px
-    z-index: 10
+  #brand-logo-container
     position: fixed
-    top: 5px
+    width: 100%
+    z-index: 10
+    img
+      padding-left: 20px
+      width: 150px
+      position: fixed
+      top: 5px
+      @media only screen and (max-width: 768px)
+        display: block
+        margin: auto
+        position: relative
+        top: 0px
+        padding: 0
+
+
   nav
-    background: rgba(0, 0, 0, 0.8)
+    background: rgba(150, 150, 150, 0.6)
     z-index: 1
     position: fixed
     top: 10px
+    left: 0px
     width: 100%
-    // height: 40px
     color: white
-    padding-left: 0
+    @media only screen and (max-width: 768px)
+      top: 15px
+    #nav-height
+      height: 40px
+      @media only screen and (min-width: 768px)
+        display: none
     #nav-bar-options
+      @media only screen and (max-width: 768px)
+        display: none
       height: 40px
       margin-left: 200px
       display: table

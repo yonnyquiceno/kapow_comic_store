@@ -1,7 +1,10 @@
 <%= javascript_include_tag "nav_bar" %>
 <span id="navBar">
+    <span id="brand-logo-container">
     <%= link_to image_tag("kapow.png"), root_path, class: 'brand-logo'%>
+    </span>
     <nav>
+        <div id="nav-height"></div>
         <div id="nav-bar-options">
             <h5 class="nav-bar-option">
                 <a href="/comics" class="nav-bar-link">Lista de Comics</a>
