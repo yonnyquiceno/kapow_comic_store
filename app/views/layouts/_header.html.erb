@@ -1,0 +1,24 @@
+<div id="navBar">
+    <nav>
+        <div class="nav-wrapper">
+                <a href="#" class="brand-logo"><%=image_tag("kapow.png")%></a>
+                <ul id="site-menu">
+                    <li><%= link_to "Lista de Comics", products_path, :class => 'nav-bar-option' %></li>
+                    <li><%= link_to "Agregar nuevo Comic", new_product_path, :class => 'nav-bar-option' %></li>
+                </ul>
+                <% if user_signed_in? %>
+                <ul id="user-menu" class="hide-on-med-and-down">
+                    <li>Logged in as
+                        <strong><%= current_user.email %></strong>.</li>
+                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-bar-option' %></li>
+                </ul>
+            <% else %>
+                <ul id="nav-mobile" class="hide-on-med-and-down">
+                    <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
+                    <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+                    <% end %>
+                </ul>
+        </div>
+    </nav>
+
+</div>
