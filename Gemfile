@@ -11,6 +11,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'fuzzy-string-match'
 gem 'faker'
+gem 'devise'
+gem 'materialize-sass'
 group :development, :test do
   gem 'byebug'
 end
