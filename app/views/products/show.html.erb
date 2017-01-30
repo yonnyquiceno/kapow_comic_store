@@ -1,0 +1,24 @@
+<%= render "layouts/header" %>
+<span id="product-show">
+    <div class="top-space"></div>
+    <div class="prod-container">
+        <%=image_tag(asset_path(@product.image1.to_s), :class => "shrink pic prod-img")%>
+        <h3>
+            <%= @product.name.capitalize%>
+        </h3>
+        <h3>
+            Descripción:<br>
+        </h3>
+        <h4>
+            <%= @product.description%>
+        </h4>
+        <h3>
+            Comentarios:<br>
+        </h3>
+        <h4>
+            <% @product.comments.map(&:text).each_with_index do |comment, idx|%>
+            <%="persona" + "  " +  idx.to_s + "  " + "dice:    " + comment%><br>
+            <%end%>
+        </h4>
+    </div>
+</span>

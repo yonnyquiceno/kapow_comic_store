@@ -21,6 +21,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @prod_id = params[:id]
+    @product = Product.find(@prod_id)
+  end
+
   def search
     @products = Product.where("name REGEXP ?", ".*#{@query}")
   end

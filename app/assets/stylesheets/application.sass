@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Roboto')
 @import url('https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker')
+@import url('https://fonts.googleapis.com/css?family=Roboto')
 @import "products_index"
 @import "forms"
+@import "product_show"
 *
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
@@ -13,6 +15,31 @@
     width: 100%
 
 #navBar
+  #side-menu
+    height: 1000px
+    position: fixed
+    top: 0
+    left: 0
+    background-color: white
+    font-family: 'Roboto'
+    font-size: 12px
+    overflow: auto
+    padding-left: 10px
+    padding-right: 10px
+    background-color: rgb(214, 240, 255)
+    a
+      text-decoration: none
+      color: black
+
+  #side-menu-icon
+    z-index: 20
+    text-align: left
+    font-size: 40px
+    color: white
+    position: fixed
+    left: 10px
+    @media only screen and (min-width: 768px)
+      display: none
   #brand-logo-container
     position: fixed
     width: 100%
