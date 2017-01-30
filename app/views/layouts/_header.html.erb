@@ -6,49 +6,48 @@
     <span id="side-menu-icon">
         <i class="material-icons">menu</i>
     </span>
-    <div id="side-menu">
-        <div class="top-space"></div><br><br>
-        <span>usuario:
-            <br>
-            <strong>
-                <%= current_user.email %>
-            </strong>
-        </span><br><br><br>
-        <a href="/comics" class="side-menu-option comics-list">Lista de Comics</a><br><br>
-        <a href="/add-comics" class="side-menu-option">Agregar Nuevo Comic</a><br><br>
-        <a href="/users/sign_out" data-method="delete" class="side-menu-option">Cerrar sesion</a>
-    </div>
-
-    <span id="brand-logo-container">
-        <%= link_to image_tag("kapow.png"), root_path, class: 'brand-logo'%>
-    </span>
     <nav>
-        <div id="nav-height"></div>
-        <div id="nav-bar-options">
-            <h5 class="nav-bar-option">
-                <a href="/comics" class="nav-bar-link comics-list">Lista de Comics</a>
-            </h5>
-            <h5 class="nav-bar-option">
-                <a href="/add-comics" class="nav-bar-link">Agregar Nuevo Comic</a>
-            </h5>
-            <h5 class="show-search-field">
-                <i class="material-icons show-search-field">&#xE8B6;</i>
-                &nbsp;<a class="show-search-field">Búsqueda</a>
-            </h5>
-        </h5>
-        <span id="user-options">
-            <h5 id="user-signed-in">
-                <span>Logged in as
-                    <strong>
-                        <%= current_user.email %>
-                    </strong>
-                </span>
-            </h5>
-            <h5 class="nav-bar-option">
-                <a href="/users/sign_out" data-method="delete" class="nav-bar-link">Cerrar sesion</a>
-            </h5>
+        <div id="side-menu">
+            <div class="top-space"></div><br><br>
+            <span>usuario:
+                <br>
+                <strong>
+                    <%= current_user.email %>
+                </strong>
+            </span><br><br><br>
+            <a href="/comics" class="side-menu-option comics-list">Lista de Comics</a><br><br>
+            <a href="/add-comics" class="side-menu-option">Agregar Nuevo Comic</a><br><br>
+            <a href="/users/sign_out" data-method="delete" class="side-menu-option">Cerrar sesion</a>
+        </div>
+        <span id="brand-logo-container">
+            <%= link_to image_tag("kapow.png"), root_path, class: 'brand-logo'%>
         </span>
-
-    </div>
-</nav>
+        <nav>
+            <div id="nav-height"></div>
+            <div id="nav-bar-options">
+                <h5 class="nav-bar-option">
+                    <a href="/comics" class="nav-bar-link comics-list">Lista de Comics</a>
+                </h5>
+                <h5 class="nav-bar-option">
+                    <a href="/add-comics" class="nav-bar-link">Agregar Nuevo Comic</a>
+                </h5>
+                <h5 class="show-search-field">
+                    <i class="material-icons show-search-field">&#xE8B6;</i>
+                    &nbsp;<a class="show-search-field">Búsqueda</a>
+                </h5>
+            </h5>
+            <span id="user-options">
+                <h5 id="user-signed-in">
+                    <span>Logged in as
+                        <strong>
+                            <%= current_user.email %>
+                        </strong>
+                    </span>
+                </h5>
+                <h5 class="nav-bar-option">
+                    <a href="/users/sign_out" data-method="delete" class="nav-bar-link">Cerrar sesion</a>
+                </h5>
+            </span>
+        </div>
+    </nav>
 </span>
