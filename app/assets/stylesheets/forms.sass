@@ -1,0 +1,50 @@
+.flex-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .blank-space
+    width: 30%
+    @media only screen and (max-width: 768px)
+      width: 10%
+  .form-container
+    margin-top: 20px
+    width: 30%
+    padding: 20px
+    border-radius: 5px
+    background-color: rgba(200, 200, 250, 0.6)
+    font-family: 'Oswald'
+    font-size: 12px
+    @media only screen and (max-width: 768px)
+      width: 80%
+    .submit-section
+      margin-top: 30px
+      text-align: center
+      a
+        text-decoration: none
+        color: rgb(244, 66, 86)
+      .button
+        border-radius: 10px
+        background-color: rgb(255, 156, 35)
+        border: hidden
+        color: white
+        font-family: 'Oswald'
+        padding-top: 3px
+        padding-bottom: 3px
+        padding-left: 20px
+        padding-right: 20px
+    .form-l-t-pair
+      width: 100%
+      display: table
+      label
+        vertical-align: middle
+        display: table-cell
+      input
+        display: table-cell
+        float: right
+        width: 12em
+        border-radius: 5px
+      textarea
+        border-radius: 5px
+        float: right
+        width: 12em
+      .form-submit
