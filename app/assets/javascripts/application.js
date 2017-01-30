@@ -14,9 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-$(document).ready(function() {
-  $(".nav-bar-option").mouseenter(function() {
-    $("h5").css("font-size", "30");
-    }
-}
