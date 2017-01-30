@@ -1,12 +1,15 @@
 class ProductsController < ApplicationController
   def index
+    redirect_to new_user_session_path unless user_signed_in?
     @products = Product.all
   end
   def new
+    redirect_to new_user_session_path unless user_signed_in?
     @product = Product.new
   end
 
   def create
+    redirect_to new_user_session_path unless user_signed_in?
     @product = Product.new(product_params)
     if @product.save
       flash[:success] = 'comic registered successfully.'

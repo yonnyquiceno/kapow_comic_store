@@ -8,23 +8,23 @@
         <div class="form-l-t-pair">
             <%= form.label "Título", for:'name'%>
             <%= form.text_field :name, class:'', required: true%>
-        </div><br>
+        </div>
         <div class="form-l-t-pair">
             <%= form.label "Precio", for:'price'%>
             <%= form.text_field :price, class:'', required: true%>
-        </div><br>
+        </div>
         <div class="form-l-t-pair">
             <%= form.label "Imagen Frontal" , for:'image1'%>
             <%= form.text_field :image1, class:'', required: true%>
-        </div><br>
+        </div>
         <div class="form-l-t-pair">
             <%= form.label "Imagen Trasera" , for:'image2'%>
             <%= form.text_field :image2, class:'', required: true%>
-        </div><br>
+        </div>
         <div class="form-l-t-pair">
             <%= form.label "Descripción", for:'description'%>
             <%= form.text_area :description, class:'', required: true%>
-        </div><br>
+        </div>
         <div class="submit-section">
             <%= form.submit "Registrar Producto", class: 'button'%><br>
             <%= link_to "Cancelar", products_path, class: ''%>
