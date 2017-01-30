@@ -1,6 +1,10 @@
+<%= javascript_include_tag "products_index" %>
 <%= render "layouts/header" %>
 <span id="products_index_page">
-    <div class="top-space"></div>
+  <div class="top-space"></div>
+    <div id="search-field-container">
+      <input type="search" placeholder="&nbsp; Buscar..." id="search-field"/>
+    </div>
     <div class="flex-container">
     <% @products.each do |prod| %>
     <div class="prod-container">

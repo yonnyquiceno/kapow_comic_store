@@ -3,6 +3,26 @@ html
   background-size: cover
   background-attachment: fixed
 #products_index_page
+  #search-field-container
+    text-align: center
+    @media only screen and (max-width: 768px)
+      margin-top: 15px
+    input[type=search]
+      width: 200px
+      box-sizing: border-box
+      border: 2px solid #ccc
+      border-radius: 4px
+      font-size: 16px
+      background-color: white
+      background-image: url('magnifier.png')
+      background-position: 5px 5px
+      background-repeat: no-repeat
+      padding: 12px 20px 12px 40px
+      -webkit-transition: width 0.4s ease-in-out
+      transition: width 0.4s ease-in-out
+      &:focus
+        width: 50%
+
   .flex-container
     display: flex
     flex-wrap: wrap
