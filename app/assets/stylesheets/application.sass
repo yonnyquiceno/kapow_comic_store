@@ -1,25 +1,122 @@
-@import "materialize"
-@import "pages"
-nav
-  background: rgba(0, 0, 0, 0) !important
-  color: white
+@import url('https://fonts.googleapis.com/css?family=Oswald|Roboto')
+@import url('https://fonts.googleapis.com/css?family=Oswald|Permanent+Marker')
+@import url('https://fonts.googleapis.com/css?family=Roboto')
+@import "products_index"
+@import "forms"
+@import "product_show"
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  box-sizing: border-box
+
+  .top-space
+    height: 60px
+    width: 100%
+
 #navBar
-  z-index: 1
-  position: absolute
-  top: 0px
-  width: 100%
-  img
-    @media (min-width: 768px)
-      padding-left: 30px
-      height: 80px
-  .nav-wrapper
-    background: rgba(0, 0, 0, 0.8) !important
-  #site-menu
-    position: absolute
-    right: 50%
-  #user-menu
-    position: absolute
-    right: 30px
-    .nav-bar-option
+  #side-menu
+    height: 1000px
+    position: fixed
+    top: 0
+    left: 0
+    background-color: white
+    font-family: 'Roboto'
+    font-size: 12px
+    overflow: auto
+    padding-left: 10px
+    padding-right: 10px
+    background-color: rgb(214, 240, 255)
+    a
+      text-decoration: none
+      color: black
+
+  #side-menu-icon
+    z-index: 20
+    text-align: left
+    font-size: 40px
+    color: white
+    position: fixed
+    left: 10px
+    @media only screen and (min-width: 768px)
+      display: none
+  #brand-logo-container
+    position: fixed
+    width: 100%
+    z-index: 10
+    img
+      padding-left: 20px
+      width: 150px
+      position: fixed
+      top: 5px
+      @media only screen and (max-width: 768px)
+        display: block
+        margin: auto
+        position: relative
+        top: 0px
+        padding: 0
+  nav
+    background: rgba(150, 150, 150, 0.6)
+    z-index: 1
+    position: fixed
+    top: 10px
+    left: 0px
+    width: 100%
+    color: white
+    @media only screen and (max-width: 768px)
+      top: 15px
+    #nav-height
+      height: 40px
+      @media only screen and (min-width: 768px)
+        display: none
+    #nav-bar-options
+      @media only screen and (max-width: 768px)
+        display: none
+      height: 40px
+      margin-left: 200px
+      display: table
+      .nav-bar-option
+        color: white
+        display: table-cell
+        vertical-align: middle
+        font-family: 'Oswald'
+        .nav-bar-link
+          color: white
+          text-decoration: none
+          display: inline
+    .show-search-field
       color: white
-      font-size: 60
+      display: table-cell
+      vertical-align: middle
+      position: absolute
+      right: 180px
+      top: -7px
+    a
+      font-family: 'Oswald'
+    i
+      position: absolute
+      top: -8px !important
+      right: 237px !important
+
+    #user-options
+      height: 44px
+      display: table
+      position: absolute
+      right: 40px
+      #user-signed-in
+        color: rgba(244, 110, 66, 1)
+        display: table-cell
+        vertical-align: middle
+      .nav-bar-option
+        color: white
+        display: table-cell
+        vertical-align: middle
+      a
+        color: white
+        text-decoration: none
+      h5
+        font-size: 10px
+    h5
+      font-size: 15px
+      display: inline
+      padding: 10px

@@ -1,24 +1,53 @@
-<div id="navBar">
-    <nav>
-        <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><%=image_tag("kapow.png")%></a>
-                <ul id="site-menu">
-                    <li><%= link_to "Lista de Comics", products_path, :class => 'nav-bar-option' %></li>
-                    <li><%= link_to "Agregar nuevo Comic", new_product_path, :class => 'nav-bar-option' %></li>
-                </ul>
-                <% if user_signed_in? %>
-                <ul id="user-menu" class="hide-on-med-and-down">
-                    <li>Logged in as
-                        <strong><%= current_user.email %></strong>.</li>
-                    <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'nav-bar-option' %></li>
-                </ul>
-            <% else %>
-                <ul id="nav-mobile" class="hide-on-med-and-down">
-                    <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
-                    <li><%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
-                    <% end %>
-                </ul>
-        </div>
-    </nav>
+<%= javascript_include_tag "nav_bar" %>
+<span id="navBar">
 
-</div>
+    <span id="side-menu-icon">
+        <i class="material-icons">menu</i>
+    </span>
+    <div id="side-menu">
+        <div class="top-space"></div><br><br>
+        <span>usuario:
+            <br>
+            <strong>
+                <%= current_user.email %>
+            </strong>
+        </span><br><br><br>
+        <a class="show-search-field side-menu-option">Búsqueda</a><br><br>
+        <a href="/comics" class="side-menu-option">Lista de Comics</a><br><br>
+        <a href="/add-comics" class="side-menu-option">Agregar Nuevo Comic</a><br><br>
+        <a href="/users/sign_out" data-method="delete" class="side-menu-option">Cerrar sesion</a>
+    </div>
+
+    <span id="brand-logo-container">
+        <%= link_to image_tag("kapow.png"), root_path, class: 'brand-logo'%>
+    </span>
+    <nav>
+        <div id="nav-height"></div>
+        <div id="nav-bar-options">
+            <h5 class="nav-bar-option">
+                <a href="/comics" class="nav-bar-link">Lista de Comics</a>
+            </h5>
+            <h5 class="nav-bar-option">
+                <a href="/add-comics" class="nav-bar-link">Agregar Nuevo Comic</a>
+            </h5>
+            <h5 class="show-search-field">
+                <i class="material-icons show-search-field">&#xE8B6;</i>
+                &nbsp;<a class="show-search-field">Búsqueda</a>
+            </h5>
+        </h5>
+        <span id="user-options">
+            <h5 id="user-signed-in">
+                <span>Logged in as
+                    <strong>
+                        <%= current_user.email %>
+                    </strong>
+                </span>
+            </h5>
+            <h5 class="nav-bar-option">
+                <a href="/users/sign_out" data-method="delete" class="nav-bar-link">Cerrar sesion</a>
+            </h5>
+        </span>
+
+    </div>
+</nav>
+</span>

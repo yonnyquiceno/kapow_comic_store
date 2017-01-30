@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   get '/comics', to: 'products#index', as: 'products'
   get '/add-comics', to: 'products#new', as: 'new_product'
+  get '/show/:id', to: 'products#show', as: 'show_product'
+  post '/add-comics', to: 'products#create', as: 'create_product'
 end

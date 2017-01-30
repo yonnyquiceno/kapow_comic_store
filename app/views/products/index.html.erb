@@ -1,2 +1,27 @@
+<%= javascript_include_tag "products_index" %>
 <%= render "layouts/header" %>
-<h1>Products index</h1>
+<span id="products_index_page">
+    <div class="top-space"></div>
+    <span id="not-found-message">
+        <%if @products == [] %>
+        <h2>
+            No se encontraron resultados para la búsqueda<br>
+            intente nuevamente
+        </h2>
+    </span>
+    <%end%>
+    <div id="search-field-container">
+        <input type="search" placeholder="&nbsp; Buscar..." onkeydown="search(this)" id="search-field"/>
+    </div>
+    <div class="flex-container">
+        <% @products.each do |prod| %>
+        <div class="prod-container">
+            <%= link_to image_tag(asset_path(prod.image1.to_s), :class => "shrink pic prod-img"), "/show/#{prod.id}"%>
+            <h4>
+                <%= prod.name.capitalize%>
+            </h4>
+        </div>
+        <%end %>
+    </div>
+
+</span>

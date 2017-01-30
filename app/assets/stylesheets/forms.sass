@@ -1,0 +1,61 @@
+.flex-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .blank-space
+    width: 28%
+    @media only screen and (max-width: 768px)
+      width: 10%
+  .form-container
+    margin-top: 20px
+    width: 34%
+    padding: 20px
+    border-radius: 5px
+    background-color: rgba(200, 200, 250, 0.8)
+    font-family: 'Oswald'
+    font-size: 12px
+    @media only screen and (max-width: 768px)
+      width: 80%
+    h2
+      text-align: center
+    .remember-me
+      float: right
+    .submit-section
+      margin-top: 30px
+      text-align: center
+      a
+        text-decoration: none
+        color: rgb(244, 66, 86)
+      .button
+        margin-bottom: 15px
+        border-radius: 10px
+        background-color: rgb(255, 156, 35)
+        border: hidden
+        color: white
+        font-family: 'Oswald'
+        padding-top: 3px
+        padding-bottom: 3px
+        padding-left: 20px
+        padding-right: 20px
+    .form-l-t-pair
+      width: 100%
+      display: table
+      label
+        vertical-align: middle
+        display: table-cell
+      input, textarea
+        display: table-cell
+        float: right
+        width: 12em
+        border-style: hidden
+        border-radius: 5px
+        margin-bottom: 5px
+        margin-top: 5px
+        padding: 3px
+      input:-webkit-autofill
+        -webkit-box-shadow: 0 0 0px 1000px rgba(255, 125, 66, 0.5) inset
+      // textarea
+      //   border-radius: 5px
+      //   float: right
+      //   width: 12em
+      .form-submit
