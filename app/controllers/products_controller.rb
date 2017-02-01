@@ -28,7 +28,7 @@ class ProductsController < ApplicationController
 
   def search
     # @products = Product.where("name REGEXP ?", ".*#{@query}")
-    @products = Product.where("name like ?", "%#{@query.downcase}%")
+    @products = Product.where("LOWER(name) like ?", "%#{@query.downcase}%")
   end
 
 
